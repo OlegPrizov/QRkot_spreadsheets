@@ -6,9 +6,11 @@ from aiogoogle import Aiogoogle
 from app.core.config import settings
 from app.models import CharityProject
 
-GET_REPORT_TO_GOOGLE = 'Добавить данные из БД в Google-таблицу'
+GET_REPORT_TO_GOOGLE = 'Добавить данные о проектах в гугл-таблицу'
 TABLE_NAME = 'Отчеты QRkot'
-SHEET_NAME_RATING_SPEED_CLOSING = 'Рейтинг проектов по скорости закрытия'
+SHEET_NAME_RATING_SPEED_CLOSING = 'Рейтинг проектов по быстроте закрытия'
+ROW_COUNT = 100
+COLUMN_COUNT = 30
 
 
 async def spreadsheet_create(wrapper_service: Aiogoogle) -> str:
@@ -24,8 +26,8 @@ async def spreadsheet_create(wrapper_service: Aiogoogle) -> str:
                 'sheetId': 0,
                 'title': SHEET_NAME_RATING_SPEED_CLOSING,
                 'gridProperties': {
-                    'rowCount': 50,
-                    'columnCount': 5
+                    'rowCount': ROW_COUNT,
+                    'columnCount': COLUMN_COUNT
                 }
             }}
         ]
