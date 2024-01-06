@@ -18,6 +18,7 @@ QRКот - приложение для Благотворительного фо
 - Python 3.10.5
 - Pydantic 1.9.1
 - SQLAlchemy 1.4.36
+– aiogoogle 4.2.0
 
 ## Как заполнить файл .env
 - DATABASE_URL = <> #Выбор базы данных (по умолчанию: sqlite+aiosqlite:///./fastapi.db)
